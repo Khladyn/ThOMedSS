@@ -3,19 +3,15 @@
 
     <item
         android:id="@+id/patient_info"
-        android:title="@string/activity_patient_info" >
+        android:title="@string/activity_patient_info" />
 
-        <menu>
-            <item
-                android:id="@+id/personal"
-                android:title="@string/activity_personal" />
+    <item
+        android:id="@+id/personal"
+        android:title="@string/activity_personal" />
 
-            <item
-                android:id="@+id/health"
-                android:title="@string/activity_health" />
-        </menu>
-
-    </item>
+    <item
+        android:id="@+id/health"
+        android:title="@string/activity_health" />
 
     <item
         android:id="@+id/case_tracker"
