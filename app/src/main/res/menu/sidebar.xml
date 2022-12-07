@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/patient_info"
+        android:title="@string/activity_patient_info" >
+
+        <menu>
+            <item
+                android:id="@+id/personal"
+                android:title="@string/activity_personal" />
+
+            <item
+                android:id="@+id/health"
+                android:title="@string/activity_health" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/case_tracker"
+        android:title="@string/activity_case_tracker" />
+
+    <item
+        android:id="@+id/consultation"
+        android:title="@string/activity_consultation" />
+
+    <item
+        android:id="@+id/developers"
+        android:title="@string/activity_developers" />
+</menu>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ThOMedSS</string>
+    <string name="activity_patient_info">Patient Information</string>
+    <string name="activity_personal">Personal and Contact Information</string>
+    <string name="activity_health">Health History</string>
+    <string name="activity_login">Login</string>
+    <string name="activity_consultation">Online Consultation</string>
+    <string name="activity_case_tracker">Case Tracker</string>
+    <string name="activity_developers">Developers</string>
+</resources>
