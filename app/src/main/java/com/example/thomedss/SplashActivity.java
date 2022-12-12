@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
-        ActionBar actionBar= getSupportActionBar();
-
+//        ActionBar actionBar= getSupportActionBar();
+////        actionBar.hide();
 
 
         progressBar = findViewById(R.id.progressBar);
