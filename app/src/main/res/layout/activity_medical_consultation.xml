@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CaseTrackerActivity">
+    tools:context=".MedicalConsultationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:paddingTop="5dp"
-                android:text="COVID-19 Case Tracker"
+                android:text="Medical Consultation"
                 android:textAlignment="textEnd"
                 android:textColor="#FDBF15"
                 android:textSize="17sp" />
@@ -68,7 +68,7 @@
                         android:paddingLeft="13dp"
                         android:paddingTop="5dp"
                         android:paddingRight="13dp"
-                        android:text="Health Declaration Mode"
+                        android:text="Medical Cases"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp" />
 
@@ -91,128 +91,38 @@
                                 android:id="@+id/descriptionHDCF"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:justificationMode="inter_word"
+                                android:text="You can only make online consultations during the schedule shown below."
+                                android:textColor="#212529"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/scheduleMC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
-                                android:fontFamily="@font/poppins_light"
-                                android:justificationMode="inter_word"
-                                android:text="The COVID-19 Case Tracker is a preventive measure by the University in order to control and mitigate the effects of the COVID-19 infection in the Thomasian community. The case tracker features:"
-                                android:textColor="#212529"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="5dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/labelForHDMType1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="Health Declaration Mode"
-                                android:textColor="#28A745"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/HDMType1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_light"
                                 android:justificationMode="inter_word"
-                                android:text="The patient accomplishes a health declaration checklist to check for risk of COVID-19 infection."
-                                android:textColor="#212529"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/labelForHDMType2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:text="Case Monitoring Mode"
+                                android:text="Mondays to Saturdays   08:00 AM - 05:00 PM"
+                                android:textAlignment="center"
                                 android:textColor="#DC3545"
                                 android:textSize="12sp" />
-
-                            <TextView
-                                android:id="@+id/HDMType2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_light"
-                                android:justificationMode="inter_word"
-                                android:text="This helps the patient monitor for COVID-19 signs and symptoms and provide action plans to manage it."
-                                android:textColor="#212529"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:background="@android:color/darker_gray" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/labelForDate"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:paddingRight="15dp"
-                                android:text="Please select a date"
-                                android:textColor="#212529"
-                                android:textSize="12sp" />
-
-                            <EditText
-                                android:id="@+id/checklistDate"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:background="#FFFFFF"
-                                android:clickable="false"
-                                android:cursorVisible="false"
-                                android:ems="10"
-                                android:focusable="true"
-                                android:focusableInTouchMode="true"
-                                android:fontFamily="@font/poppins_light"
-                                android:hint="MM/DD/YYYY"
-                                android:includeFontPadding="false"
-                                android:inputType="date"
-                                android:paddingLeft="8dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="8dp"
-                                android:paddingBottom="5dp"
-                                android:singleLine="true"
-                                android:textColor="#212529"
-                                android:textSize="12sp"
-                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:layout_marginTop="5dp"
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/buttonLinkForDentalConsultation"
+                                android:id="@+id/buttonLinkForMedicalConsultation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:backgroundTint="#FDBF15"
+                                android:backgroundTint="#17A2B8"
                                 android:fontFamily="@font/poppins_bold"
                                 android:includeFontPadding="false"
                                 android:letterSpacing="0"
@@ -220,8 +130,45 @@
                                 android:paddingTop="4dp"
                                 android:paddingRight="16dp"
                                 android:paddingBottom="4dp"
-                                android:text="✚   New Health Declaration Checklist"
+                                android:text="Procedure for Dental Consultation"
                                 android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                            <Button
+                                android:id="@+id/buttonLinkForDoctorsScheduleOnline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#17A2B8"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Doctors Schedule (ONLINE)"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                            <Button
+                                android:id="@+id/buttonLinkForDoctorsScheduleOnsite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#17A2B8"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Doctors Schedule (ONSITE)"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
                                 android:textSize="13sp"
                                 app:cornerRadius="0dp" />
                         </LinearLayout>

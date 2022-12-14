@@ -6,11 +6,678 @@
     android:layout_height="match_parent"
     tools:context=".HealthActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_black"
-        android:text="@string/activity_health" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="#2D2926"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/icon_menu" />
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="5dp"
+                android:text="Health History"
+                android:textAlignment="textEnd"
+                android:textColor="#FDBF15"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="35dp"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/medicalCases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2D2926"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:text="Medical History Form"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF0F1"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/descriptionHDCF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="Please check the items that apply to you."
+                            android:textColor="#212529"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkBoxArthritis"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Arthritis"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxAsthma"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Asthma"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxBleedingDisorder"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Bleeding Disorder"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxBoneMarrowTransplant"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Bone Marrow Transplant"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxCOVID"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="COVID-19"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxCancer"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Cancer"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxChickenpox"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Chickenpox"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxCOPD"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Chronic Obstructive Pulmonary Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxDengue"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Dengue"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxDiabetes"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Diabetes"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHeartDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Heart Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHematologicDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Hematologic Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHepatitisA"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Hepatitis A"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHepatitisB"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Hepatitis B"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHBP"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="High Blood Pressure / Hypertension"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHighCholesterol"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="High Cholesterol"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHighRiskPregnancy"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="High Risk Pregnancy"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxOrganTransplant"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="History of Organ Transplant"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxAllergicReaction"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="History of Serious Allergic Reaction"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxImmunoDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Immunodeficiency Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxKidneyDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Kidney Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxLiverDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Liver Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxLungDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Lung Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxMeasles"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Measles"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxMumps"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Mumps"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxNeurologicalDisease"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Neurological Disease"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxObesity"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Obesity"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxDialysis"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="On-going Dialysis"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxHIV"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Poorly controlled HIV/AIDS"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxSteroids"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Prolonged use of steroids"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxTuberculosis"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Tuberculosis"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxTyphoid"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Typhoid"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxImmunoDrugs"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Use of Immunosuppressant Drugs"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/saveButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="#28A745"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Update"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/socialHistoryForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2D2926"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:text="Social History Form"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF0F1"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/descriptionSHR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="Please check the items that apply to you."
+                            android:textColor="#212529"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkBoxSmoker"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Are you a smoker?"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxAlcohol"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Do you drink alcohol?"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/buttonUpdateSHR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="#28A745"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Update"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/obstetricHistoryForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2D2926"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:text="Obstetric History Form"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF0F1"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/descriptionOHR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="Please check the items that apply to you."
+                            android:textColor="#212529"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkBoxRegularMens"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Do you have a regular menstrual cycle?"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxOCP"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Are you taking oral contraceptive pills (OCP)?"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxPregnant"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Have you been pregnant?"
+                                android:textSize="12sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBoxMiscarriage"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="Any history of miscarriage?"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/buttonUpdateOHR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="#28A745"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Update"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,11 +6,174 @@
     android:layout_height="match_parent"
     tools:context=".DevelopersActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_black"
-        android:text="@string/activity_developers" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="#2D2926"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/icon_menu" />
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="5dp"
+                android:text="The Developers"
+                android:textAlignment="textEnd"
+                android:textColor="#FDBF15"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="35dp"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/developerPhoto1"
+                        android:layout_width="360dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/photodeveloper1" />
+
+                    <TextView
+                        android:id="@+id/developerName1"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:capitalize="none"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false"
+                        android:paddingTop="10dp"
+                        android:text="Jean Khladyn Stefanie Abarquez"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/developerCollege1"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:text="College of Information and Computing Sciences
+BS in Information Technology"
+                        android:textAlignment="center"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/developerPhoto2"
+                        android:layout_width="360dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/photodeveloper2" />
+
+                    <TextView
+                        android:id="@+id/developerName2"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:capitalize="none"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false"
+                        android:paddingTop="10dp"
+                        android:text="Margaret Bernice Carreon"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/developerCollege2"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:text="College of Information and Computing Sciences
+BS in Information Technology"
+                        android:textAlignment="center"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/developerPhoto3"
+                        android:layout_width="360dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/photodeveloper3" />
+
+                    <TextView
+                        android:id="@+id/developerName3"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:capitalize="none"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false"
+                        android:paddingTop="10dp"
+                        android:text="Charles Dave Reyes"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/developerCollege3"
+                        android:layout_width="360dp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="College of Information and Computing Sciences
+BS in Information Technology"
+                        android:textAlignment="center"
+                        android:textColor="#212529"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

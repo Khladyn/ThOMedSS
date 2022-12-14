@@ -16,11 +16,4 @@ public class PersonalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
     }
-
-//    @Nullable
-//    @Override
-//    public View onCreateView(@Nullable View parent, @NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
-//
-//        return super.onCreateView(parent, name, context, attrs);
-//    }
 }

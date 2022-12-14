@@ -7,81 +7,97 @@
 
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="198dp"
-        android:layout_height="111dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="ThOMedSS Mobile"
-        android:textColor="@color/black"
-        android:textFontWeight="1000"
-        android:textSize="34sp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="139dp"
-        android:layout_height="155dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276"
-        app:srcCompat="@drawable/tiger" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="312dp"
-        android:layout_height="52dp"
-        android:backgroundTint="@color/black"
-        android:ems="10"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppins"
-        android:hint="Student or Employee Number"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="65dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="15dp"
+                app:srcCompat="@drawable/thomedss_logo" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="315dp"
-        android:layout_height="54dp"
-        android:backgroundTint="@color/black"
-        android:ems="10"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppins"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:text="ThOMedSS Mobile"
+                android:textColor="#2D2926"
+                android:textSize="40sp"
+                app:lineHeight="45sp" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="319dp"
-        android:layout_height="53dp"
-        android:background="@color/gold"
-        android:fontFamily="@font/poppins_bold"
-        android:text="LOGIN"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/userID"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#2D2926"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Student or Employee Number"
+                android:inputType="phone"
+                android:textColor="#2D2926"
+                android:textColorHint="#9AA1A8"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/userPass"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#2D2926"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#2D2926"
+                android:textColorHint="#9AA1A8"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="#FDBF15"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:letterSpacing="0"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="#2D2926"
+                android:textSize="16sp"
+                app:cornerRadius="0dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

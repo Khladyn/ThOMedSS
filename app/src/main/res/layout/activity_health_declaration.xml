@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthDeclarationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="#2D2926"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/icon_menu" />
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="5dp"
+                android:text="COVID-19 Case Tracker"
+                android:textAlignment="textEnd"
+                android:textColor="#FDBF15"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="35dp"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/medicalCases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2D2926"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:text="Health Declaration Checklist Form"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF0F1"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/descriptionHDCF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#B53471"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="Please read the questions carefully. Be aware of your current health and provide correct information only."
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Purpose of Visit"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioVisit1"
+                                    android:layout_width="80dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Offical"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioVisit2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Personal"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Place of Work or Visit"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/placeOfWorkVisit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:ems="10"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:inputType="textLongMessage|textMultiLine|text"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Temperature"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/temperature"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:ems="10"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="1 decimal hint required (ex 37.0)"
+                                android:includeFontPadding="false"
+                                android:inputType="numberDecimal"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="15dp"
+                                android:text="1"
+                                android:textColor="#2D2926"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/label6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:justificationMode="inter_word"
+                                android:paddingRight="10dp"
+                                android:text="Are you experiencing any of the following symptoms?"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom1"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Fever"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date1"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom2"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Cough"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date2"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom3"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Colds"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom5"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Throat pain"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date5"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom6"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Shortness of breath"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date6"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom7"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Difficulty of breathing"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date7"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom8"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Diarrhea + fever"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date8"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom9"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Rash + fever"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date9"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom10"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Loss of taste"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date10"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom11"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Loss of smell"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupSymptom11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date11"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view11"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="15dp"
+                                android:text="2"
+                                android:textColor="#2D2926"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/label7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:justificationMode="inter_word"
+                                android:paddingRight="10dp"
+                                android:text="Have you worked together or stayed in the same close environment of a confirmed COVID-19 case?"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupNumber2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYesNumber2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNoNumber2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/dateNumber2"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="Date of Contact"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/descriptionRadioGroupNumber2_1"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="145dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="Living in the same house, room, apartment, dorm unit"
+                            android:textColor="#212529"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupNumber2_1"
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="145dp"
+                            android:layout_marginRight="10dp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioYesNumber2_1"
+                                android:layout_width="60dp"
+                                android:layout_height="27dp"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="Yes"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioNoNumber2_1"
+                                android:layout_width="60dp"
+                                android:layout_height="27dp"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="No"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/descriptionRadioGroupNumber2_2"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="145dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="History of dining together within the last 2 days from date of exposure"
+                            android:textColor="#212529"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupNumber2_2"
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="145dp"
+                            android:layout_marginRight="10dp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioYesNumber2_2"
+                                android:layout_width="60dp"
+                                android:layout_height="27dp"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="Yes"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioNoNumber2_2"
+                                android:layout_width="60dp"
+                                android:layout_height="27dp"
+                                android:buttonTint="#2D2926"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:text="No"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="15dp"
+                                android:text="3"
+                                android:textColor="#2D2926"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/label9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:justificationMode="inter_word"
+                                android:paddingRight="10dp"
+                                android:text="Are you recently diagnosed as a confirmed case of COVID-19 in the last 2 weeks?"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupNumber3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYesNumber3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNoNumber3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/dateNumber3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="15dp"
+                                android:text="4"
+                                android:textColor="#2D2926"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/label11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:justificationMode="inter_word"
+                                android:paddingRight="10dp"
+                                android:text="Have you travelled outside the Philippines in the last 14 days?"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupNumber4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYesNumber4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNoNumber4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/dateNumber4"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="Date of Travel"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/dateNumber5"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="145dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="left"
+                            android:hint="Date of Arrival to the Philippines"
+                            android:includeFontPadding="false"
+                            android:inputType="date"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="#212529"
+                            android:textSize="10sp"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <EditText
+                            android:id="@+id/dateNumber6"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="145dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="left"
+                            android:hint="Country of Travel"
+                            android:includeFontPadding="false"
+                            android:inputType="textShortMessage|textMultiLine|text"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="#212529"
+                            android:textSize="10sp"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <TextView
+                            android:id="@+id/label12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:justificationMode="inter_word"
+                            android:paddingRight="10dp"
+                            android:text="Authorization for Health Declaration Checklist"
+                            android:textColor="#2D2926"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/descriptionAuthorization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="I hereby authorize University of Santo Tomas, to collect and process the data indicated herein for the purpose of effecting control of the COVID-19 infection. I understand that my personal information is protected by RA 10173, Data Privacy Act of 2012, and that I am required by RA 11469, Bayanihan to Heal as One Act, to provide truthful information."
+                            android:textColor="#212529"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/cancelButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:backgroundTint="#DC3545"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Cancel"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                            <Button
+                                android:id="@+id/saveButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="#28A745"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Save"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
