@@ -153,6 +153,276 @@
                                 android:textColor="#FFFFFF"
                                 android:textSize="13sp"
                                 app:cornerRadius="0dp" />
+
+                            <View
+                                android:id="@+id/view6"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@android:color/darker_gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:background="#FFFFFF"
+                                android:orientation="vertical"
+                                android:paddingBottom="8dp">
+
+                                <TextView
+                                    android:id="@+id/header2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#004A76"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:text="Scheduled Cases"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="0dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/textView0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="8dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="No data available"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="0dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/textView1_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="Date Created"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView1_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_light"
+                                        android:hint="MM/DD/YYYY"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="0dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/textView2_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="Time Queued"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView2_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_light"
+                                        android:hint="00:00 - 00:00"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="0dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/textView3_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="Queue Status"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView3_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_light"
+                                        android:hint="Status"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="0dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="0dp"
+                                    android:paddingBottom="0dp">
+
+                                    <TextView
+                                        android:id="@+id/textView4_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="Attending Status"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView4_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:fontFamily="@font/poppins_light"
+                                        android:hint="Status"
+                                        android:includeFontPadding="false"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:textColor="#2D2926"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
                         </LinearLayout>
 
                     </LinearLayout>
