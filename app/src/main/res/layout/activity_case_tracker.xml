@@ -7,9 +7,13 @@
     tools:context=".CaseTrackerActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -208,7 +212,7 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/buttonLinkForDentalConsultation"
+                                android:id="@+id/declarationButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"

@@ -3,28 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_case_tracker.xml" value="0.22" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_consultation.xml" value="0.22" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_dental_consultation.xml" value="0.25" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_developers.xml" value="0.25" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_health.xml" value="0.22" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_health_declaration.xml" value="0.25" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_medical_consultation.xml" value="0.2" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_patient_info.xml" value="0.225" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_personal.xml" value="0.2" />
-        <entry key="..\:/Users/WINDOWS/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/font/font.xml" value="0.14166666666666666" />
-        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_case_tracker.xml" value="0.1125" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_case_tracker.xml" value="0.4" />
         <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_consultation.xml" value="0.1125" />
-        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_developers.xml" value="0.1125" />
-        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_health.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_login.xml" value="0.1125" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_dental_consultation.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_developers.xml" value="0.264" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_health.xml" value="0.20408163265306123" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_health_declaration.xml" value="0.39255014326647564" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_medical_consultation.xml" value="0.4" />
         <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_patient_info.xml" value="0.1125" />
-        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_personal.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_pdfviewer.xml" value="0.1265625" />
+        <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_personal.xml" value="0.6" />
         <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/layout/activity_splash.xml" value="0.1125" />
         <entry key="..\:/Users/jeank_szo0711/AndroidStudioProjects/ThOMedSS/app/src/main/res/menu/sidebar.xml" value="0.20572916666666666" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
       </map>
     </option>
   </component>
