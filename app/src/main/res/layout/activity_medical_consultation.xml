@@ -130,7 +130,7 @@
                                 android:paddingTop="4dp"
                                 android:paddingRight="16dp"
                                 android:paddingBottom="4dp"
-                                android:text="Procedure for Dental Consultation"
+                                android:text="Procedure for Medical Consultation"
                                 android:textAllCaps="false"
                                 android:textColor="#FFFFFF"
                                 android:textSize="13sp"

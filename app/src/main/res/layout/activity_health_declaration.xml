@@ -7,9 +7,13 @@
     tools:context=".HealthDeclarationActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,6 +125,7 @@
 
                             <RadioGroup
                                 android:id="@+id/radioGroup1"
+                                android:checkedButton="@id/radioVisit1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -302,7 +307,8 @@
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom1"
+                                android:id="@+id/radioGroup2"
+                                android:checkedButton="@id/radioNo2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -311,7 +317,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes1"
+                                    android:id="@+id/radioYes2"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -324,7 +330,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo1"
+                                    android:id="@+id/radioNo2"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -390,7 +396,8 @@
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom2"
+                                android:id="@+id/radioGroup3"
+                                android:checkedButton="@id/radioNo3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -399,7 +406,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes2"
+                                    android:id="@+id/radioYes3"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -412,7 +419,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo2"
+                                    android:id="@+id/radioNo3"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -478,7 +485,8 @@
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom3"
+                                android:id="@+id/radioGroup4"
+                                android:checkedButton="@id/radioNo4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -487,7 +495,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes3"
+                                    android:id="@+id/radioYes4"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -500,7 +508,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo3"
+                                    android:id="@+id/radioNo4"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -566,7 +574,8 @@
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom5"
+                                android:id="@+id/radioGroup5"
+                                android:checkedButton="@id/radioNo5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -589,6 +598,95 @@
 
                                 <RadioButton
                                     android:id="@+id/radioNo5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="No"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/date4"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="left"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textAlignment="center">
+
+                            <TextView
+                                android:id="@+id/symptom6"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Shortness of breath"
+                                android:textColor="#2D2926"
+                                android:textSize="10sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup6"
+                                android:checkedButton="@id/radioNo6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioYes6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Yes"
+                                    android:textColor="#2D2926"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioNo6"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -641,7 +739,7 @@
                             android:textAlignment="center">
 
                             <TextView
-                                android:id="@+id/symptom6"
+                                android:id="@+id/symptom7"
                                 android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -649,21 +747,23 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:includeFontPadding="false"
-                                android:text="Shortness of breath"
+                                android:text="Difficulty of breathing"
                                 android:textColor="#2D2926"
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom6"
+                                android:id="@+id/radioGroup7"
+                                android:checkedButton="@id/radioNo7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginRight="10dp"
                                 android:clipToPadding="false"
+                                android:gravity="center_vertical"
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes6"
+                                    android:id="@+id/radioYes7"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -676,7 +776,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo6"
+                                    android:id="@+id/radioNo7"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -729,7 +829,7 @@
                             android:textAlignment="center">
 
                             <TextView
-                                android:id="@+id/symptom7"
+                                android:id="@+id/symptom8"
                                 android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -737,22 +837,22 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:includeFontPadding="false"
-                                android:text="Difficulty of breathing"
+                                android:text="Diarrhea + fever"
                                 android:textColor="#2D2926"
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom7"
+                                android:id="@+id/radioGroup8"
+                                android:checkedButton="@id/radioNo8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginRight="10dp"
                                 android:clipToPadding="false"
-                                android:gravity="center_vertical"
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes7"
+                                    android:id="@+id/radioYes8"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -765,7 +865,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo7"
+                                    android:id="@+id/radioNo8"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -818,7 +918,7 @@
                             android:textAlignment="center">
 
                             <TextView
-                                android:id="@+id/symptom8"
+                                android:id="@+id/symptom9"
                                 android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -826,12 +926,13 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:includeFontPadding="false"
-                                android:text="Diarrhea + fever"
+                                android:text="Rash + fever"
                                 android:textColor="#2D2926"
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom8"
+                                android:id="@+id/radioGroup9"
+                                android:checkedButton="@id/radioNo9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -840,7 +941,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes8"
+                                    android:id="@+id/radioYes9"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -853,7 +954,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo8"
+                                    android:id="@+id/radioNo9"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -906,7 +1007,7 @@
                             android:textAlignment="center">
 
                             <TextView
-                                android:id="@+id/symptom9"
+                                android:id="@+id/symptom10"
                                 android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -914,12 +1015,13 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:includeFontPadding="false"
-                                android:text="Rash + fever"
+                                android:text="Loss of taste"
                                 android:textColor="#2D2926"
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom9"
+                                android:id="@+id/radioGroup10"
+                                android:checkedButton="@id/radioNo10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -928,7 +1030,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYes9"
+                                    android:id="@+id/radioYes10"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -941,7 +1043,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNo9"
+                                    android:id="@+id/radioNo10"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -994,94 +1096,6 @@
                             android:textAlignment="center">
 
                             <TextView
-                                android:id="@+id/symptom10"
-                                android:layout_width="102dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginBottom="5dp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:includeFontPadding="false"
-                                android:text="Loss of taste"
-                                android:textColor="#2D2926"
-                                android:textSize="10sp" />
-
-                            <RadioGroup
-                                android:id="@+id/radioGroupSymptom10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginRight="10dp"
-                                android:clipToPadding="false"
-                                android:orientation="horizontal">
-
-                                <RadioButton
-                                    android:id="@+id/radioYes10"
-                                    android:layout_width="60dp"
-                                    android:layout_height="27dp"
-                                    android:buttonTint="#2D2926"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:includeFontPadding="false"
-                                    android:scaleX="0.7"
-                                    android:scaleY="0.7"
-                                    android:text="Yes"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
-
-                                <RadioButton
-                                    android:id="@+id/radioNo10"
-                                    android:layout_width="60dp"
-                                    android:layout_height="27dp"
-                                    android:buttonTint="#2D2926"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:includeFontPadding="false"
-                                    android:scaleX="0.7"
-                                    android:scaleY="0.7"
-                                    android:text="No"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
-
-                            </RadioGroup>
-
-                            <EditText
-                                android:id="@+id/date10"
-                                android:layout_width="80dp"
-                                android:layout_height="wrap_content"
-                                android:background="#FFFFFF"
-                                android:clickable="false"
-                                android:cursorVisible="false"
-                                android:ems="10"
-                                android:focusable="false"
-                                android:focusableInTouchMode="false"
-                                android:fontFamily="@font/poppins_light"
-                                android:gravity="left"
-                                android:hint="MM/DD/YYYY"
-                                android:includeFontPadding="false"
-                                android:inputType="date"
-                                android:paddingLeft="8dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="8dp"
-                                android:paddingBottom="5dp"
-                                android:singleLine="true"
-                                android:textAlignment="center"
-                                android:textColor="#212529"
-                                android:textSize="10sp"
-                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginBottom="8dp"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp"
-                            android:textAlignment="center">
-
-                            <TextView
                                 android:id="@+id/symptom11"
                                 android:layout_width="102dp"
                                 android:layout_height="wrap_content"
@@ -1095,7 +1109,8 @@
                                 android:textSize="10sp" />
 
                             <RadioGroup
-                                android:id="@+id/radioGroupSymptom11"
+                                android:id="@+id/radioGroup11"
+                                android:checkedButton="@id/radioNo11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -1132,7 +1147,7 @@
                             </RadioGroup>
 
                             <EditText
-                                android:id="@+id/date11"
+                                android:id="@+id/date10"
                                 android:layout_width="80dp"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
@@ -1212,7 +1227,8 @@
                             android:textAlignment="center">
 
                             <RadioGroup
-                                android:id="@+id/radioGroupNumber2"
+                                android:id="@+id/radioGroup12"
+                                android:checkedButton="@id/radioNo12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -1221,7 +1237,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYesNumber2"
+                                    android:id="@+id/radioYes12"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1234,7 +1250,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNoNumber2"
+                                    android:id="@+id/radioNo12"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1249,7 +1265,7 @@
                             </RadioGroup>
 
                             <EditText
-                                android:id="@+id/dateNumber2"
+                                android:id="@+id/date11"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
@@ -1287,7 +1303,8 @@
                             android:textSize="10sp" />
 
                         <RadioGroup
-                            android:id="@+id/radioGroupNumber2_1"
+                            android:id="@+id/radioGroup13"
+                            android:checkedButton="@id/radioNo13"
                             android:layout_width="170dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
@@ -1297,7 +1314,7 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/radioYesNumber2_1"
+                                android:id="@+id/radioYes13"
                                 android:layout_width="60dp"
                                 android:layout_height="27dp"
                                 android:buttonTint="#2D2926"
@@ -1310,7 +1327,7 @@
                                 android:textSize="12sp" />
 
                             <RadioButton
-                                android:id="@+id/radioNoNumber2_1"
+                                android:id="@+id/radioNo13"
                                 android:layout_width="60dp"
                                 android:layout_height="27dp"
                                 android:buttonTint="#2D2926"
@@ -1337,7 +1354,8 @@
                             android:textSize="10sp" />
 
                         <RadioGroup
-                            android:id="@+id/radioGroupNumber2_2"
+                            android:id="@+id/radioGroup14"
+                            android:checkedButton="@id/radioNo14"
                             android:layout_width="170dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
@@ -1347,7 +1365,7 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/radioYesNumber2_2"
+                                android:id="@+id/radioYes14"
                                 android:layout_width="60dp"
                                 android:layout_height="27dp"
                                 android:buttonTint="#2D2926"
@@ -1360,7 +1378,7 @@
                                 android:textSize="12sp" />
 
                             <RadioButton
-                                android:id="@+id/radioNoNumber2_2"
+                                android:id="@+id/radioNo14"
                                 android:layout_width="60dp"
                                 android:layout_height="27dp"
                                 android:buttonTint="#2D2926"
@@ -1429,7 +1447,8 @@
                             android:textAlignment="center">
 
                             <RadioGroup
-                                android:id="@+id/radioGroupNumber3"
+                                android:id="@+id/radioGroup15"
+                                android:checkedButton="@id/radioNo15"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -1438,7 +1457,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYesNumber3"
+                                    android:id="@+id/radioYes15"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1451,7 +1470,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNoNumber3"
+                                    android:id="@+id/radioNo15"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1466,7 +1485,7 @@
                             </RadioGroup>
 
                             <EditText
-                                android:id="@+id/dateNumber3"
+                                android:id="@+id/date12"
                                 android:layout_width="80dp"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
@@ -1546,7 +1565,8 @@
                             android:textAlignment="center">
 
                             <RadioGroup
-                                android:id="@+id/radioGroupNumber4"
+                                android:id="@+id/radioGroup16"
+                                android:checkedButton="@id/radioNo16"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -1555,7 +1575,7 @@
                                 android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:id="@+id/radioYesNumber4"
+                                    android:id="@+id/radioYes16"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1568,7 +1588,7 @@
                                     android:textSize="12sp" />
 
                                 <RadioButton
-                                    android:id="@+id/radioNoNumber4"
+                                    android:id="@+id/radioNo16"
                                     android:layout_width="60dp"
                                     android:layout_height="27dp"
                                     android:buttonTint="#2D2926"
@@ -1583,7 +1603,7 @@
                             </RadioGroup>
 
                             <EditText
-                                android:id="@+id/dateNumber4"
+                                android:id="@+id/date13"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
@@ -1609,7 +1629,7 @@
                         </LinearLayout>
 
                         <EditText
-                            android:id="@+id/dateNumber5"
+                            android:id="@+id/date14"
                             android:layout_width="170dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="145dp"
@@ -1634,24 +1654,48 @@
                             android:textSize="10sp"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                        <EditText
-                            android:id="@+id/dateNumber6"
+<!--                        <EditText-->
+<!--                            android:id="@+id/countryOfTravel"-->
+<!--                            android:layout_width="170dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="145dp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:background="#FFFFFF"-->
+<!--                            android:clickable="false"-->
+<!--                            android:cursorVisible="false"-->
+<!--                            android:ems="10"-->
+<!--                            android:focusable="false"-->
+<!--                            android:focusableInTouchMode="false"-->
+<!--                            android:fontFamily="@font/poppins_light"-->
+<!--                            android:gravity="left"-->
+<!--                            android:hint="Country of Travel"-->
+<!--                            android:includeFontPadding="false"-->
+<!--                            android:inputType="textShortMessage|textMultiLine|text"-->
+<!--                            android:paddingLeft="8dp"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:paddingRight="8dp"-->
+<!--                            android:paddingBottom="5dp"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textColor="#212529"-->
+<!--                            android:textSize="10sp"-->
+<!--                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+
+                        <Spinner
+                            android:id="@+id/countryOfTravel"
+                            android:spinnerMode="dropdown"
                             android:layout_width="170dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="145dp"
                             android:layout_marginTop="8dp"
                             android:layout_weight="1"
                             android:background="#FFFFFF"
-                            android:clickable="false"
                             android:cursorVisible="false"
                             android:ems="10"
                             android:focusable="false"
                             android:focusableInTouchMode="false"
                             android:fontFamily="@font/poppins_light"
-                            android:gravity="left"
-                            android:hint="Country of Travel"
                             android:includeFontPadding="false"
-                            android:inputType="textShortMessage|textMultiLine|text"
                             android:paddingLeft="8dp"
                             android:paddingTop="5dp"
                             android:paddingRight="8dp"
