@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChiefComplaintActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="#2D2926"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/icon_menu" />
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="5dp"
+                android:text="New Consultation Case"
+                android:textAlignment="textEnd"
+                android:textColor="#FDBF15"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="35dp"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/medicalCases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2D2926"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="13dp"
+                        android:text="Chief Complaint Form"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF0F1"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/descriptionHDCF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#B53471"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="You may communicate in Filipino language."
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Case Type"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCaseType"
+                                android:checkedButton="@id/radioVisit1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioMedical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Medical"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioDental"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Dental"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/labelCaseType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Location"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioOnsite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Onsite"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioOnline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="27dp"
+                                    android:buttonTint="#2D2926"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:includeFontPadding="false"
+                                    android:scaleX="0.7"
+                                    android:scaleY="0.7"
+                                    android:text="Online"
+                                    android:textColor="#2D2926"
+                                    android:textSize="14sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/labelPatientName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Patient Name"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/patientName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:enabled="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:inputType="text"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/labelDateCreated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Date Created"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/dateCreated"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="MM/DD/YYYY"
+                                android:includeFontPadding="false"
+                                android:inputType="date"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/labelTimeQueue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Preferred Time"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/timeQueue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="00:00"
+                                android:includeFontPadding="false"
+                                android:inputType="time"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/labelAttendingDoctor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Attending Doctor"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/attendingDoctor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:enabled="false"
+                                android:cursorVisible="false"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:inputType="text"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:singleLine="true"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/labelCaseDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:includeFontPadding="false"
+                                android:paddingRight="10dp"
+                                android:text="Reason for Consultation"
+                                android:textColor="#2D2926"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/caseDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="#FFFFFF"
+                                android:ems="10"
+                                android:fontFamily="@font/poppins_light"
+                                android:includeFontPadding="false"
+                                android:inputType="textLongMessage|textMultiLine|text"
+                                android:hint="Please be descriptive and detailed as possible so that doctors/dentists will get a clear and accurate assessment of your complaint"
+                                android:gravity="top"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="#212529"
+                                android:textSize="10sp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray" />
+
+                        <TextView
+                            android:id="@+id/labelConsent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:justificationMode="inter_word"
+                            android:paddingRight="10dp"
+                            android:text="Consent Form for Online Consultation"
+                            android:textColor="#2D2926"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/consentForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="I hereby authorize University of Santo Tomas, to collect and process the data indicated herein for the purpose of effecting control of the COVID-19 infection. I understand that my personal information is protected by RA 10173, Data Privacy Act of 2012, and that I am required by RA 11469, Bayanihan to Heal as One Act, to provide truthful information."
+                            android:textColor="#212529"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/cancelButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:backgroundTint="#DC3545"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Cancel"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                            <Button
+                                android:id="@+id/saveButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="#28A745"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="0"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="4dp"
+                                android:text="Save"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:cornerRadius="0dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,9 +7,13 @@
     tools:context=".MedicalConsultationActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,6 +77,7 @@
                         android:textSize="14sp" />
 
                     <LinearLayout
+                        android:id="@+id/cardContainer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#ECF0F1"
@@ -178,10 +183,34 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="15dp"
-                            android:layout_marginBottom="20dp"
+                            android:layout_marginBottom="15dp"
                             android:background="@android:color/darker_gray" />
 
+                        <Button
+                            android:id="@+id/buttonforScheduling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:backgroundTint="#FDBF15"
+                            android:fontFamily="@font/poppins_bold"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="16dp"
+                            android:paddingBottom="4dp"
+                            android:text="+ New Medical Case"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            app:cornerRadius="0dp" />
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content">-->
+
                         <LinearLayout
+                            android:id="@+id/appointmentCard"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="10dp"
@@ -204,242 +233,242 @@
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="0dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginRight="0dp"
-                                android:layout_marginBottom="5dp"
-                                android:orientation="vertical"
-                                android:paddingLeft="0dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="0dp"
-                                android:paddingBottom="0dp">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="0dp"-->
+<!--                                android:layout_marginTop="0dp"-->
+<!--                                android:layout_marginRight="0dp"-->
+<!--                                android:layout_marginBottom="5dp"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingLeft="0dp"-->
+<!--                                android:paddingTop="0dp"-->
+<!--                                android:paddingRight="0dp"-->
+<!--                                android:paddingBottom="0dp">-->
 
-                                <TextView
-                                    android:id="@+id/textView0"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="0dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:layout_weight="1"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="8dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:text="No data available"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
-                            </LinearLayout>
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView0"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_marginLeft="8dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="0dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:fontFamily="@font/poppins_light"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="8dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:text="No data available"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
+<!--                            </LinearLayout>-->
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="0dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginRight="0dp"
-                                android:layout_marginBottom="5dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="0dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="0dp"
-                                android:paddingBottom="0dp">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="0dp"-->
+<!--                                android:layout_marginTop="0dp"-->
+<!--                                android:layout_marginRight="0dp"-->
+<!--                                android:layout_marginBottom="5dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:paddingLeft="0dp"-->
+<!--                                android:paddingTop="0dp"-->
+<!--                                android:paddingRight="0dp"-->
+<!--                                android:paddingBottom="0dp">-->
 
-                                <TextView
-                                    android:id="@+id/textView1_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="10dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_semibold"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:text="Date Created"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView1_1"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="8dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="10dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_semibold"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:text="Date Created"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                                <TextView
-                                    android:id="@+id/textView1_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="0dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="0dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:hint="MM/DD/YYYY"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView1_2"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="0dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="0dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_light"-->
+<!--                                    android:hint="MM/DD/YYYY"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="0dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginRight="0dp"
-                                android:layout_marginBottom="5dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="0dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="0dp"
-                                android:paddingBottom="0dp">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="0dp"-->
+<!--                                android:layout_marginTop="0dp"-->
+<!--                                android:layout_marginRight="0dp"-->
+<!--                                android:layout_marginBottom="5dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:paddingLeft="0dp"-->
+<!--                                android:paddingTop="0dp"-->
+<!--                                android:paddingRight="0dp"-->
+<!--                                android:paddingBottom="0dp">-->
 
-                                <TextView
-                                    android:id="@+id/textView2_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="10dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_semibold"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:text="Time Queued"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView2_1"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="8dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="10dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_semibold"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:text="Time Queued"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                                <TextView
-                                    android:id="@+id/textView2_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="0dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="0dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:hint="00:00"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView2_2"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="0dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="0dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_light"-->
+<!--                                    android:hint="00:00"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="0dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginRight="0dp"
-                                android:layout_marginBottom="5dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="0dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="0dp"
-                                android:paddingBottom="0dp">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="0dp"-->
+<!--                                android:layout_marginTop="0dp"-->
+<!--                                android:layout_marginRight="0dp"-->
+<!--                                android:layout_marginBottom="5dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:paddingLeft="0dp"-->
+<!--                                android:paddingTop="0dp"-->
+<!--                                android:paddingRight="0dp"-->
+<!--                                android:paddingBottom="0dp">-->
 
-                                <TextView
-                                    android:id="@+id/textView3_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="10dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_semibold"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:text="Queue Status"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView3_1"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="8dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="10dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_semibold"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:text="Queue Status"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                                <TextView
-                                    android:id="@+id/textView3_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="0dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="0dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:hint="Status"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView3_2"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="0dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="0dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_light"-->
+<!--                                    android:hint="Status"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="0dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginRight="0dp"
-                                android:layout_marginBottom="0dp"
-                                android:orientation="horizontal"
-                                android:paddingLeft="0dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="0dp"
-                                android:paddingBottom="0dp">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_marginLeft="0dp"-->
+<!--                                android:layout_marginTop="0dp"-->
+<!--                                android:layout_marginRight="0dp"-->
+<!--                                android:layout_marginBottom="0dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:paddingLeft="0dp"-->
+<!--                                android:paddingTop="0dp"-->
+<!--                                android:paddingRight="0dp"-->
+<!--                                android:paddingBottom="0dp">-->
 
-                                <TextView
-                                    android:id="@+id/textView4_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="10dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_semibold"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:text="Attending Status"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView4_1"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="8dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="10dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_semibold"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:text="Attending Doctor"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                                <TextView
-                                    android:id="@+id/textView4_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="0dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="0dp"
-                                    android:layout_marginBottom="0dp"
-                                    android:fontFamily="@font/poppins_light"
-                                    android:hint="Status"
-                                    android:includeFontPadding="false"
-                                    android:paddingLeft="0dp"
-                                    android:paddingTop="0dp"
-                                    android:paddingRight="0dp"
-                                    android:paddingBottom="0dp"
-                                    android:textColor="#2D2926"
-                                    android:textSize="12sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/textView4_2"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginLeft="0dp"-->
+<!--                                    android:layout_marginTop="0dp"-->
+<!--                                    android:layout_marginRight="0dp"-->
+<!--                                    android:layout_marginBottom="0dp"-->
+<!--                                    android:fontFamily="@font/poppins_light"-->
+<!--                                    android:hint="Doctor's name"-->
+<!--                                    android:includeFontPadding="false"-->
+<!--                                    android:paddingLeft="0dp"-->
+<!--                                    android:paddingTop="0dp"-->
+<!--                                    android:paddingRight="0dp"-->
+<!--                                    android:paddingBottom="0dp"-->
+<!--                                    android:textColor="#2D2926"-->
+<!--                                    android:textSize="12sp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
                         </LinearLayout>
 
                     </LinearLayout>

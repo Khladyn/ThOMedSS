@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import kotlinx.coroutines.internal.LockFreeLinkedListNode;
 
@@ -123,12 +124,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //SECTION 1
 //    public static final String CONSULTATION_ID = "CONSULTATION_ID";
+    public static final String PATIENT_NAME = "PATIENT_NAME";
     public static final String CASE_TYPE = "CASE_TYPE";
-    public static final String DATE_CREATED = "DATE_CREATED";
+    public static final String LOCATION = "LOCATION";
     public static final String CASE_DETAILS = "CASE_DETAILS";
+    public static final String DATE_CREATED = "DATE_CREATED";
     public static final String SCHEDULE = "SCHEDULE";
-    public static final String ATTENDING_DOCTOR = "ATTENDING_DOCTOR";
     public static final String STATUS = "STATUS";
+    public static final String ATTENDING_DOCTOR = "ATTENDING_DOCTOR";
 
 
     public DatabaseHelper(@Nullable Context context) {
@@ -229,13 +232,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 = "CREATE TABLE " + CONSULTATION_TABLE +
                 "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 USER_ID + " TEXT," +
-
+                PATIENT_NAME + " TEXT," +
                 CASE_TYPE + " TEXT," +
-                DATE_CREATED + "  NUMERIC," +
                 CASE_DETAILS + " TEXT," +
-                SCHEDULE + " NUMERIC," +
+                DATE_CREATED + "  TEXT," +
+                SCHEDULE + " TEXT," +
+                STATUS + " TEXT," +
                 ATTENDING_DOCTOR + "  TEXT," +
-                STATUS + " BOOL)";
+                LOCATION + " TEXT)";
 
 
         String populate
@@ -249,11 +253,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "('2019645782', 'pass_five', 'true', 'Ellen Jenny Lacan', 'Female', 19, 'Student', 'College of Information and Computing Sciences', 'Bachelor of Science in Information Technology', 'Married', 'Filipino', 'Roman Catholic')," +
                 "('2018302147', 'pass_six', 'true', 'Reid Cortez Vitug', 'Male', 44, 'Employee', 'Faculty of Sacred Theology', 'N/A', 'Married', 'Filipino', 'Roman Catholic')";
 
+        String populate2
+                = "INSERT INTO " + CONSULTATION_TABLE +
+                "(USER_ID, PATIENT_NAME, CASE_TYPE, CASE_DETAILS, DATE_CREATED, SCHEDULE, STATUS, ATTENDING_DOCTOR, LOCATION) " +
+                "VALUES ('2020123456', 'Dillon Jaren Diongon Flores', 'Medical', 'Headache', '12-04-2022', '08:20', 'Done', 'Henry Ong', 'Online')," +
+                "('2021177362', 'Xavier Joel Francisco', 'Dental', 'Vomiting', '11-04-2022', '08:20', 'Done', 'Willy Santos', 'Online')," +
+                "('2019315478', 'Cassandra Ruby Duarte', 'Medical', 'No appetite', '12-10-2022', '11:45', 'Waiting', 'Ericka Layug', 'Online')," +
+                "('2019315478', 'Cassandra Ruby Duarte', 'Dental', 'Vertigo', '08-13-2022', '11:45', 'Waiting', 'Sam Ferol', 'Online')," +
+                "('2019315478', 'Cassandra Ruby Duarte', 'Dental', 'Vomiting', '09-27-2022', '10:45', 'Done', 'Sam Ferol', 'Onsite')," +
+                "('2019315478', 'Cassandra Ruby Duarte', 'Dental', 'Toothache', '11-29-2022', '09:15', 'Waiting', 'Isabelle Hans', 'Online')," +
+                "('2019645782', 'Ellen Jenny Lacan', 'Medical', 'Broken ribs', '10-22-2022', '10:30', 'Done', 'Leo Yap', 'Onsite')," +
+                "('2019645782', 'Ellen Jenny Lacan', 'Medical', 'Night sweats', '11-30-2022', '8:30', 'Done', 'Rachel Sikapan', 'Online')," +
+                "('2019645782', 'Ellen Jenny Lacan', 'Medical', 'Vertigo', '12-17-2022', '14:45', 'Waiting', 'Jacob Yamut', 'Onsite')," +
+                "('2018302147', 'Reid Cortez Vitug', 'Dental', 'Excessive bleeding', '09-12-2022', '16:15', 'Done', 'Rachel Sikapan', 'Onsite')";
+
         db.execSQL(createUserTable);
         db.execSQL(createHealthTable);
         db.execSQL(createDeclarationTable);
         db.execSQL(createConsultationTable);
         db.execSQL(populate);
+        db.execSQL(populate2);
 
     }
 
@@ -565,5 +584,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         {
             return true;
         }
+    }
+
+    public ArrayList<ConsultationModel> getAppointment(String id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues cv = new ContentValues();
+
+        ArrayList<ConsultationModel> appointments = new ArrayList<>();
+
+//        cv.put(USER_ID, consultation.getId());
+//        cv.put(PATIENT_NAME, consultation.getName());
+//        cv.put(CASE_TYPE, consultation.getId());
+//        cv.put(CASE_DETAILS, consultation.getDescription());
+//        cv.put(DATE_CREATED, consultation.getDateCreated());
+//        cv.put(SCHEDULE, consultation.getTimeQueued());
+//        cv.put(STATUS, consultation.getQueueStatus());
+//        cv.put(ATTENDING_DOCTOR, consultation.getAttendingDoctor());
+
+        Cursor c = db.query(CONSULTATION_TABLE, null,USER_ID + "=?", new String[] {id}, null, null, DATE_CREATED + " DESC", null);
+
+        if (c != null && c.moveToFirst())
+        {
+            do {
+                appointments.add(
+                        new ConsultationModel(
+                                c.getString(1),
+                                c.getString(2),
+                                c.getString(3),
+                                c.getString(4),
+                                c.getString(5),
+                                c.getString(6),
+                                c.getString(7),
+                                c.getString(8),
+                                c.getString(0),
+                                c.getString(9)));
+            } while (c.moveToNext());
+        }
+
+        db.close();
+
+        return appointments;
+
     }
 }
