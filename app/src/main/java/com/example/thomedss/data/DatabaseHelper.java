@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import kotlinx.coroutines.internal.LockFreeLinkedListNode;
 
@@ -297,16 +298,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 USER_PROGRAM,
                 USER_CIVIL,
                 USER_CITIZENSHIP,
-                USER_RELIGION };
+                USER_RELIGION,
+                PRIMARY_MOBILE,
+                OTHER_MOBILE,
+                EMAIL,
+                RESIDENCE,
+                FACEBOOK_NAME,
+                CONTACT_PERSON,
+                RELATIONSHIP,
+                PRIMARY_CONTACT,
+                CONTACT_EMAIL,
+                CONTACT_ADDRESS,
+                ZIP_CODE
+        };
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.query(USER_TABLE, columns,USER_ID + "=?", new String[] {id}, null, null, null, "1");
 
-        if (c != null)
+        if (c != null && c.moveToFirst())
         {
-            c.moveToFirst();
             userInfo.setId(id);
             userInfo.setName(c.getString(0));
+            userInfo.setPhoto(c.getString(1));
             userInfo.setSex(c.getString(2));
             userInfo.setAge(c.getString(3));
             userInfo.setType(c.getString(4));
@@ -315,6 +328,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             userInfo.setCivil(c.getString(7));
             userInfo.setCitizenship(c.getString(8));
             userInfo.setReligion(c.getString(9));
+            userInfo.setMobile(c.getString(10));
+            userInfo.setOther_mobile(c.getString(11));
+            userInfo.setEmail(c.getString(12));
+            userInfo.setResidence(c.getString(13));
+            userInfo.setFacebook(c.getString(14));
+            userInfo.setC_person(c.getString(15));
+            userInfo.setC_relationship(c.getString(16));
+            userInfo.setC_primary(c.getString(17));
+            userInfo.setC_email(c.getString(18));
+            userInfo.setC_address(c.getString(19));
+            userInfo.setC_zipcode(c.getString(20));
         }
 
         c.close();
@@ -323,6 +347,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return userInfo;
     }
 
+
+    public boolean verifyHealth(String id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.query(HEALTH_TABLE, null, USER_ID + "=?", new String[] {id}, null, null, null);
+
+        int healthExists = c.getCount();
+
+        c.close();
+        db.close();
+
+        if (healthExists > 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 
     public HealthModel getHealth (String id)
     {
@@ -340,9 +384,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.query(HEALTH_TABLE, columns,USER_ID + "=?", new String[] {id}, null, null, null, "1");
 
-        if (c != null)
+        if (c != null && c.moveToFirst())
         {
-            c.moveToFirst();
             healthInfo.setId(id);
             healthInfo.setIllnesses(c.getString(0));
             healthInfo.setSmoker(c.getInt(1) > 0);
@@ -559,13 +602,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(ARRIVAL_DATE, declaration.getArrivalDate());
         cv.put(TRAVEL_COUNTRY, declaration.getTravelCountry());
 
-        Cursor c = db.query(DECLARATION_TABLE, null,USER_ID + "=?" + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null, "1");
+        Cursor c = db.query(DECLARATION_TABLE, null,USER_ID + "=?" + " AND " + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null, "1");
 
         long createSuccess = 0;
 
         if (c != null && c.moveToFirst())
         {
-            createSuccess = db.update(DECLARATION_TABLE, cv, USER_ID + "=?" + DECLARATION_DATE + "=?", new String[] {id, dateCreated});
+            createSuccess = db.update(DECLARATION_TABLE, cv, USER_ID + "=?" + " AND " + DECLARATION_DATE + "=?", new String[] {id, dateCreated});
 
         } else {
             createSuccess = db.insert(DECLARATION_TABLE, null, cv);
@@ -582,43 +625,78 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean getDeclaration (String id, String dateCreated)
+    public boolean verifyDeclaration(String id, String dateCreated)
     {
-//        UserModel userDeclaration = new UserModel();
-//
-//        String[] columns = new String[] {
-//                USER_ID,
-//                USER_NAME,
-//                USER_TYPE,
-//                USER_COLLEGE};
-
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c1 = db.query(DECLARATION_TABLE, null,USER_ID + "=?" + " AND " + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null);
-//        Cursor c2 = db.query(USER_TABLE, columns,USER_ID + "=?", new String[] {id}, null, null, null, "1");
 
-        int declarationExists = c1.getCount();
+        Cursor c = db.query(DECLARATION_TABLE, null, USER_ID + "=?" + " AND " + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null);
 
-        c1.close();
+        int declarationExists = c.getCount();
+
+        c.close();
         db.close();
 
         if (declarationExists > 0)
         {
             return true;
-
-//            c2.moveToFirst();
-//            userDeclaration.setId(c2.getString(0));
-//            userDeclaration.setName(c2.getString(1));
-//            userDeclaration.setType(c2.getString(2));
-//            userDeclaration.setCollege(c2.getString(3));
         } else {
             return false;
         }
+
+    }
+
+    public UserModel getDeclaration (String id)
+    {
+        UserModel userDeclaration = new UserModel();
+
+        String[] columns = new String[] {
+                USER_ID,
+                USER_NAME,
+                USER_TYPE,
+                USER_COLLEGE};
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c1 = db.query(USER_TABLE, columns,USER_ID + "=?", new String[] {id}, null, null, null);
+
+        int declarationExists = c1.getCount();
+
+        if (declarationExists > 0 && c1.moveToFirst()) {
+            userDeclaration.setId(c1.getString(0));
+            userDeclaration.setName(c1.getString(1));
+            userDeclaration.setType(c1.getString(2));
+            userDeclaration.setCollege(c1.getString(3));
+        }
+
+        c1.close();
+        db.close();
+
+        return userDeclaration;
+
+    }
+
+    public boolean verifyAppointment(String id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.query(CONSULTATION_TABLE, null, USER_ID + "=?", new String[] {id}, null, null, null);
+
+        int appointmentExists = c.getCount();
+
+        c.close();
+        db.close();
+
+        if (appointmentExists > 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     public ArrayList<ConsultationModel> getAppointment(String id)
     {
         SQLiteDatabase db = this.getReadableDatabase();
-//        ContentValues cv = new ContentValues();
 
         ArrayList<ConsultationModel> appointments = new ArrayList<>();
 
@@ -656,6 +734,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(USER_ID, complaint.getId());
         cv.put(PATIENT_NAME, complaint.getPatientName());
         cv.put(CASE_TYPE, complaint.getCaseType());
+        cv.put(CASE_DETAILS, complaint.getCaseDetails());
         cv.put(DATE_CREATED, complaint.getDateCreated());
         cv.put(SCHEDULE, complaint.getTimeQueued());
         cv.put(STATUS, complaint.getQueueStatus());

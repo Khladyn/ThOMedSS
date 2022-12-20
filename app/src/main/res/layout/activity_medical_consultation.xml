@@ -6,9 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MedicalConsultationActivity">
 
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -205,10 +210,6 @@
                             android:textSize="13sp"
                             app:cornerRadius="0dp" />
 
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content">-->
-
                         <LinearLayout
                             android:id="@+id/appointmentCard"
                             android:layout_width="match_parent"
@@ -233,242 +234,6 @@
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
 
-<!--                            <LinearLayout-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:layout_marginLeft="0dp"-->
-<!--                                android:layout_marginTop="0dp"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:orientation="vertical"-->
-<!--                                android:paddingLeft="0dp"-->
-<!--                                android:paddingTop="0dp"-->
-<!--                                android:paddingRight="0dp"-->
-<!--                                android:paddingBottom="0dp">-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView0"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="match_parent"-->
-<!--                                    android:layout_marginLeft="8dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="0dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:layout_weight="1"-->
-<!--                                    android:fontFamily="@font/poppins_light"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="8dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:text="No data available"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-<!--                            </LinearLayout>-->
-
-<!--                            <LinearLayout-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:layout_marginLeft="0dp"-->
-<!--                                android:layout_marginTop="0dp"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:orientation="horizontal"-->
-<!--                                android:paddingLeft="0dp"-->
-<!--                                android:paddingTop="0dp"-->
-<!--                                android:paddingRight="0dp"-->
-<!--                                android:paddingBottom="0dp">-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView1_1"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="8dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="10dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_semibold"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:text="Date Created"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView1_2"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="0dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="0dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_light"-->
-<!--                                    android:hint="MM/DD/YYYY"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                            </LinearLayout>-->
-
-<!--                            <LinearLayout-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:layout_marginLeft="0dp"-->
-<!--                                android:layout_marginTop="0dp"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:orientation="horizontal"-->
-<!--                                android:paddingLeft="0dp"-->
-<!--                                android:paddingTop="0dp"-->
-<!--                                android:paddingRight="0dp"-->
-<!--                                android:paddingBottom="0dp">-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView2_1"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="8dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="10dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_semibold"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:text="Time Queued"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView2_2"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="0dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="0dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_light"-->
-<!--                                    android:hint="00:00"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                            </LinearLayout>-->
-
-<!--                            <LinearLayout-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:layout_marginLeft="0dp"-->
-<!--                                android:layout_marginTop="0dp"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:orientation="horizontal"-->
-<!--                                android:paddingLeft="0dp"-->
-<!--                                android:paddingTop="0dp"-->
-<!--                                android:paddingRight="0dp"-->
-<!--                                android:paddingBottom="0dp">-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView3_1"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="8dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="10dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_semibold"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:text="Queue Status"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView3_2"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="0dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="0dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_light"-->
-<!--                                    android:hint="Status"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                            </LinearLayout>-->
-
-<!--                            <LinearLayout-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:layout_marginLeft="0dp"-->
-<!--                                android:layout_marginTop="0dp"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:layout_marginBottom="0dp"-->
-<!--                                android:orientation="horizontal"-->
-<!--                                android:paddingLeft="0dp"-->
-<!--                                android:paddingTop="0dp"-->
-<!--                                android:paddingRight="0dp"-->
-<!--                                android:paddingBottom="0dp">-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView4_1"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="8dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="10dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_semibold"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:text="Attending Doctor"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/textView4_2"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:layout_marginLeft="0dp"-->
-<!--                                    android:layout_marginTop="0dp"-->
-<!--                                    android:layout_marginRight="0dp"-->
-<!--                                    android:layout_marginBottom="0dp"-->
-<!--                                    android:fontFamily="@font/poppins_light"-->
-<!--                                    android:hint="Doctor's name"-->
-<!--                                    android:includeFontPadding="false"-->
-<!--                                    android:paddingLeft="0dp"-->
-<!--                                    android:paddingTop="0dp"-->
-<!--                                    android:paddingRight="0dp"-->
-<!--                                    android:paddingBottom="0dp"-->
-<!--                                    android:textColor="#2D2926"-->
-<!--                                    android:textSize="12sp" />-->
-
-<!--                            </LinearLayout>-->
                         </LinearLayout>
 
                     </LinearLayout>
@@ -479,4 +244,5 @@
         </ScrollView>
 
     </LinearLayout>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

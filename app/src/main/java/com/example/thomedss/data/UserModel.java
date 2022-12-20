@@ -2,9 +2,9 @@ package com.example.thomedss.data;
 
 public class UserModel {
 
-    private static String id = "2019315478";
+    private static String id;
     private static String password;
-    private String name;
+    private static String name;
     private String photo;
     private String sex;
     private String age;
