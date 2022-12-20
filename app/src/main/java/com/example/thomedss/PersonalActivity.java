@@ -312,6 +312,19 @@ public class PersonalActivity extends AppCompatActivity {
             }
         });
 
+        TextView footer = new TextView(context);
+        footer.setText("Logout");
+        footer.setTypeface(bold);
+        footer.setTextColor(Color.parseColor("#FDBF15"));
+        footer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, LoginActivity.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
         ImageView hideNav = new ImageView(context);
         hideNav.setImageResource(R.drawable.ic_baseline_keyboard_arrow_left_24);
 
@@ -330,6 +343,7 @@ public class PersonalActivity extends AppCompatActivity {
         navArea.addView(subheader5, childLayout2);
         navArea.addView(header4, childLayout2);
         navArea.addView(subheader6, childLayout2);
+        navArea.addView(footer, childLayout2);
 
         navBar.addView(profileArea, childLayout);
         navBar.addView(navArea, childLayout);
