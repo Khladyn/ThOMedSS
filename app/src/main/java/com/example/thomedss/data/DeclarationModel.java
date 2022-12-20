@@ -5,7 +5,7 @@ import java.util.Date;
 public class DeclarationModel {
 
     private String id;
-    private static String declarationDate = "12/17/2022";
+    private String declarationDate = new UserModel().getId();
     private String purpose;
     private String placeOfVisit;
     private String temperature;
@@ -55,6 +55,7 @@ public class DeclarationModel {
 
     public DeclarationModel
             (String id,
+             String declarationDate,
              String purpose,
              String placeOfVisit,
              String temperature,
@@ -90,6 +91,7 @@ public class DeclarationModel {
              String travelCountry) {
 
         this.id = id;
+        this.declarationDate = declarationDate;
         this.purpose = purpose;
         this.placeOfVisit = placeOfVisit;
         this.temperature = temperature;

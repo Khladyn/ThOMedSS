@@ -116,14 +116,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String ARRIVAL_DATE = "ARRIVAL_DATE";
     public static final String TRAVEL_COUNTRY = "TRAVEL_COUNTRY";
 
-    //AUTHORIZATION
-    public static final String CONSENT = "CONSENT";
-
 //CONSULTATION_TABLE VARIABLES
     public static final String CONSULTATION_TABLE = "CONSULTATION_TABLE";
 
     //SECTION 1
-//    public static final String CONSULTATION_ID = "CONSULTATION_ID";
     public static final String PATIENT_NAME = "PATIENT_NAME";
     public static final String CASE_TYPE = "CASE_TYPE";
     public static final String LOCATION = "LOCATION";
@@ -244,14 +240,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String populate
                 = "INSERT INTO " + USER_TABLE +
-                "(USER_ID, USER_PASS, USER_REMEMBER, USER_NAME, USER_SEX, USER_AGE, USER_TYPE, USER_COLLEGE, USER_PROGRAM, USER_CIVIL, USER_CITIZENSHIP, USER_RELIGION) " +
-                "VALUES ('2020123456', 'pass_one', 'true', 'Keon Aquilino Co Pérez', 'Male', 20, 'Student', 'College of Fine Arts and Design', 'Bachelor of Fine Arts, major in Industrial Design', 'Single', 'Filipino', 'Roman Catholic')," +
-                "('2020123456', 'pass_one', 'true', 'Dillon Jaren Diongon Flores', 'Male', 52, 'Employee', 'Conservatory of Music', 'N/A', 'Married', 'Filipino', 'Roman Catholic')," +
-                "('2021176201', 'pass_two', 'true', 'Michelle Yanely Azis Pasa', 'Female', 18, 'Student', 'Faculty of Pharmacy', 'Bachelor of Science in Medical Technology', 'Single', 'Filipino', 'Iglesia ni Cristo')," +
-                "('2021177362', 'pass_three', 'true', 'Xavier Joel Francisco', 'Male', 20, 'Student', 'College of Tourism and Hospitality Management', 'Bachelor of Science in Hotel and Restaurant Management', 'Single', 'Filipino', 'Roman Catholic')," +
-                "('2019315478', 'pass_four', 'true', 'Cassandra Ruby Duarte', 'Female', 21, 'Student', 'Senior High School', 'Physical Education and Sports Track', 'Single', 'Filipino', 'Aglipayan')," +
-                "('2019645782', 'pass_five', 'true', 'Ellen Jenny Lacan', 'Female', 19, 'Student', 'College of Information and Computing Sciences', 'Bachelor of Science in Information Technology', 'Married', 'Filipino', 'Roman Catholic')," +
-                "('2018302147', 'pass_six', 'true', 'Reid Cortez Vitug', 'Male', 44, 'Employee', 'Faculty of Sacred Theology', 'N/A', 'Married', 'Filipino', 'Roman Catholic')";
+                "(USER_ID, USER_PASS, USER_REMEMBER, USER_NAME, USER_PHOTO, USER_SEX, USER_AGE, USER_TYPE, USER_COLLEGE, USER_PROGRAM, USER_CIVIL, USER_CITIZENSHIP, USER_RELIGION) " +
+                "VALUES ('2020123456', 'pass_one', 'true', 'Keon Aquilino Co Pérez', 'photodeveloper3.png', 'Male', 20, 'Student', 'College of Fine Arts and Design', 'Bachelor of Fine Arts, major in Industrial Design', 'Single', 'Filipino', 'Roman Catholic')," +
+                "('2020123456', 'pass_one', 'true', 'Dillon Jaren Diongon Flores', 'photodeveloper3.png', 'Male', 52, 'Employee', 'Conservatory of Music', 'N/A', 'Married', 'Filipino', 'Roman Catholic')," +
+                "('2021176201', 'pass_two', 'true', 'Michelle Yanely Azis Pasa', 'photodeveloper1.png', 'Female', 18, 'Student', 'Faculty of Pharmacy', 'Bachelor of Science in Medical Technology', 'Single', 'Filipino', 'Iglesia ni Cristo')," +
+                "('2021177362', 'pass_three', 'true', 'Xavier Joel Francisco', 'photodeveloper3.png', 'Male', 20, 'Student', 'College of Tourism and Hospitality Management', 'Bachelor of Science in Hotel and Restaurant Management', 'Single', 'Filipino', 'Roman Catholic')," +
+                "('2019315478', 'pass_four', 'true', 'Cassandra Ruby Duarte', 'photodeveloper2.png', 'Female', 21, 'Student', 'Senior High School', 'Physical Education and Sports Track', 'Single', 'Filipino', 'Aglipayan')," +
+                "('2019645782', 'pass_five', 'true', 'Ellen Jenny Lacan', 'photodeveloper2.png', 'Female', 19, 'Student', 'College of Information and Computing Sciences', 'Bachelor of Science in Information Technology', 'Married', 'Filipino', 'Roman Catholic')," +
+                "('2018302147', 'pass_six', 'true', 'Reid Cortez Vitug', 'photodeveloper3.png', 'Male', 44, 'Employee', 'Faculty of Sacred Theology', 'N/A', 'Married', 'Filipino', 'Roman Catholic')";
 
         String populate2
                 = "INSERT INTO " + CONSULTATION_TABLE +
@@ -516,6 +512,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //IDENTIFIER
         String id = declaration.getId();
+        String dateCreated = declaration.getDeclarationDate();
 
         //OVERVIEW
         cv.put(USER_ID, declaration.getId());
@@ -556,20 +553,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(DIAGNOSED, declaration.isDiagnosed());
         cv.put(DIAGNOSED_DATE, declaration.getDiagnosedDate());
 
-
         //SECTION 4
         cv.put(TRAVEL, declaration.isTravelOutside());
         cv.put(TRAVEL_DATE, declaration.getTravelDate());
         cv.put(ARRIVAL_DATE, declaration.getArrivalDate());
         cv.put(TRAVEL_COUNTRY, declaration.getTravelCountry());
 
-        Cursor c = db.query(DECLARATION_TABLE, null,USER_ID + "=?", new String[] {id}, null, null, null, "1");
+        Cursor c = db.query(DECLARATION_TABLE, null,USER_ID + "=?" + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null, "1");
 
         long createSuccess = 0;
 
         if (c != null && c.moveToFirst())
         {
-            createSuccess = db.update(DECLARATION_TABLE, cv, "USER_ID=?", new String[] {id});
+            createSuccess = db.update(DECLARATION_TABLE, cv, USER_ID + "=?" + DECLARATION_DATE + "=?", new String[] {id, dateCreated});
 
         } else {
             createSuccess = db.insert(DECLARATION_TABLE, null, cv);
@@ -586,21 +582,45 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean getDeclaration (String id, String dateCreated)
+    {
+//        UserModel userDeclaration = new UserModel();
+//
+//        String[] columns = new String[] {
+//                USER_ID,
+//                USER_NAME,
+//                USER_TYPE,
+//                USER_COLLEGE};
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c1 = db.query(DECLARATION_TABLE, null,USER_ID + "=?" + " AND " + DECLARATION_DATE + "=?", new String[] {id, dateCreated}, null, null, null);
+//        Cursor c2 = db.query(USER_TABLE, columns,USER_ID + "=?", new String[] {id}, null, null, null, "1");
+
+        int declarationExists = c1.getCount();
+
+        c1.close();
+        db.close();
+
+        if (declarationExists > 0)
+        {
+            return true;
+
+//            c2.moveToFirst();
+//            userDeclaration.setId(c2.getString(0));
+//            userDeclaration.setName(c2.getString(1));
+//            userDeclaration.setType(c2.getString(2));
+//            userDeclaration.setCollege(c2.getString(3));
+        } else {
+            return false;
+        }
+    }
+
     public ArrayList<ConsultationModel> getAppointment(String id)
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        ContentValues cv = new ContentValues();
+//        ContentValues cv = new ContentValues();
 
         ArrayList<ConsultationModel> appointments = new ArrayList<>();
-
-//        cv.put(USER_ID, consultation.getId());
-//        cv.put(PATIENT_NAME, consultation.getName());
-//        cv.put(CASE_TYPE, consultation.getId());
-//        cv.put(CASE_DETAILS, consultation.getDescription());
-//        cv.put(DATE_CREATED, consultation.getDateCreated());
-//        cv.put(SCHEDULE, consultation.getTimeQueued());
-//        cv.put(STATUS, consultation.getQueueStatus());
-//        cv.put(ATTENDING_DOCTOR, consultation.getAttendingDoctor());
 
         Cursor c = db.query(CONSULTATION_TABLE, null,USER_ID + "=?", new String[] {id}, null, null, DATE_CREATED + " DESC", null);
 
@@ -625,6 +645,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
 
         return appointments;
+
+    }
+
+    public boolean createAppointment(ComplaintModel complaint)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(USER_ID, complaint.getId());
+        cv.put(PATIENT_NAME, complaint.getPatientName());
+        cv.put(CASE_TYPE, complaint.getCaseType());
+        cv.put(DATE_CREATED, complaint.getDateCreated());
+        cv.put(SCHEDULE, complaint.getTimeQueued());
+        cv.put(STATUS, complaint.getQueueStatus());
+        cv.put(ATTENDING_DOCTOR, complaint.getAttendingDoctor());
+        cv.put(LOCATION, complaint.getLocation());
+
+        long createSuccess = 0;
+
+        createSuccess = db.insert(CONSULTATION_TABLE, null, cv);
+
+        db.close();
+
+        if ( createSuccess == -1)
+        {
+            return false;
+        } else
+        {
+            return true;
+        }
+    }
+
+    public boolean verifyUser(String id, String password)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.query(USER_TABLE, null, USER_ID + "=?" + " AND " + USER_PASS + "=?", new String[] {id, password}, null, null, null);
+
+        int userExists = c.getCount();
+
+        c.close();
+        db.close();
+
+        if (userExists > 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 }

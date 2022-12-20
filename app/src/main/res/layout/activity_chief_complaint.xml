@@ -87,7 +87,7 @@
                         android:paddingBottom="10dp">
 
                         <TextView
-                            android:id="@+id/descriptionHDCF"
+                            android:id="@+id/descriptionCCF"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -111,7 +111,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/label1"
+                                android:id="@+id/labelCaseType1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -137,6 +137,7 @@
                                     android:id="@+id/radioMedical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="27dp"
+                                    android:checked="true"
                                     android:buttonTint="#2D2926"
                                     android:fontFamily="@font/poppins_light"
                                     android:includeFontPadding="false"
@@ -171,7 +172,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/labelCaseType"
+                                android:id="@+id/labelCaseType2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
@@ -209,6 +210,7 @@
                                     android:id="@+id/radioOnline"
                                     android:layout_width="wrap_content"
                                     android:layout_height="27dp"
+                                    android:checked="true"
                                     android:buttonTint="#2D2926"
                                     android:fontFamily="@font/poppins_light"
                                     android:includeFontPadding="false"
@@ -321,7 +323,7 @@
                                 android:fontFamily="@font/poppins_semibold"
                                 android:includeFontPadding="false"
                                 android:paddingRight="10dp"
-                                android:text="Preferred Time"
+                                android:text="Time Queued"
                                 android:textColor="#2D2926"
                                 android:textSize="12sp" />
 
@@ -330,7 +332,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
-                                android:clickable="false"
+                                android:enabled="false"
                                 android:cursorVisible="false"
                                 android:ems="10"
                                 android:focusable="false"

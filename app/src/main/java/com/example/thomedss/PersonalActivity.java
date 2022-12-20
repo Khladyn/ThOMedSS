@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -67,11 +68,15 @@ public class PersonalActivity extends AppCompatActivity {
 
         //USER OVERVIEW
         DatabaseHelper db = new DatabaseHelper(PersonalActivity.this);
-        UserModel currentUser = db.getUser("2018302147");
+//        UserModel thisUser = new UserModel();
+        UserModel currentUser = db.getUser(new UserModel().getId());
+
+        int photoID = getResources().getIdentifier(currentUser.getPhoto(), "drawable", getPackageName());
+        Drawable userPhoto = getResources().getDrawable(photoID);
 
         studentID.setText(currentUser.getId());
         studentName.setText(currentUser.getName());
-        studentPhoto.setImageResource(R.drawable.photodeveloper3);
+        studentPhoto.setImageDrawable(userPhoto);
         sex.setText(currentUser.getSex());
         age.setText(currentUser.getAge());
         personType.setText(currentUser.getType());

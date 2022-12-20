@@ -26,13 +26,13 @@
             android:name=".PersonalActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MedicalConsultationActivity"
             android:exported="true" />
         <activity
             android:name=".DevelopersActivity"
             android:exported="true" />
         <activity
-            android:name=".CaseTrackerActivity"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".DentalConsultationActivity"
@@ -45,7 +45,7 @@
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" />
         <activity
-            android:name=".MedicalConsultationActivity"
+            android:name=".CaseTrackerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -78,7 +78,8 @@ public class HealthActivity extends AppCompatActivity {
 
         //HEALTH HISTORY
         DatabaseHelper db = new DatabaseHelper(HealthActivity.this);
-        HealthModel currentHealth = db.getHealth("2021176201");
+//        UserModel currentUser = new UserModel();
+        HealthModel currentHealth = db.getHealth(new UserModel().getId());
 
         String[] getIllnesses = currentHealth.getIllnesses().split("\\s*,\\s*");
 
@@ -118,7 +119,7 @@ public class HealthActivity extends AppCompatActivity {
 
                 try {
                     healthHistory = new HealthModel(
-                            "2021176201",
+                            new UserModel().getId(),
                             sb.toString());
 
                 } catch (Exception e) {
@@ -129,7 +130,7 @@ public class HealthActivity extends AppCompatActivity {
                 boolean updateSuccess = db.updateMedical(healthHistory);
 
                 if ( updateSuccess == true ) {
-                    Toast.makeText(HealthActivity.this, "Medical History Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HealthActivity.this, "Medical History successfully updated!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(HealthActivity.this, "Cannot update Medical History", Toast.LENGTH_SHORT).show();
                 }
@@ -145,7 +146,7 @@ public class HealthActivity extends AppCompatActivity {
 
                 try {
                     healthHistory = new HealthModel(
-                            "2021176201",
+                            new UserModel().getId(),
                             smoker.isChecked(),
                             drinker.isChecked());
 
@@ -157,7 +158,7 @@ public class HealthActivity extends AppCompatActivity {
                 boolean updateSuccess = db.updateSocial(healthHistory);
 
                 if ( updateSuccess == true ) {
-                    Toast.makeText(HealthActivity.this, "Social History Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HealthActivity.this, "Social History successfully updated!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(HealthActivity.this, "Cannot update Social History", Toast.LENGTH_SHORT).show();
                 }
@@ -173,7 +174,7 @@ public class HealthActivity extends AppCompatActivity {
 
                 try {
                     healthHistory = new HealthModel(
-                            "2021176201",
+                            new UserModel().getId(),
                             regular.isChecked(),
                             contraceptives.isChecked(),
                             pregnant.isChecked(),
@@ -187,7 +188,7 @@ public class HealthActivity extends AppCompatActivity {
                 boolean updateSuccess = db.updateObstetric(healthHistory);
 
                 if ( updateSuccess == true ) {
-                    Toast.makeText(HealthActivity.this, "Obstetric History Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HealthActivity.this, "Obstetric History successfully updated!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(HealthActivity.this, "Cannot update Obstetric History", Toast.LENGTH_SHORT).show();
                 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -193,6 +194,7 @@ public class HealthDeclarationActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                                 DeclarationModel declaration = null;
+                                Intent intent = getIntent();
 
                                 if ( placeOfWorkVisit.getText().toString().isEmpty() ) {
                                     Toast.makeText(HealthDeclarationActivity.this, "Place of Work or Visit is required", Toast.LENGTH_SHORT).show();
@@ -203,6 +205,7 @@ public class HealthDeclarationActivity extends AppCompatActivity {
                                     try {
                                         declaration = new DeclarationModel(
                                                 new UserModel().getId(),
+                                                intent.getStringExtra("checklistDate"),
                                                 radioButtons[0].getText().toString(),
                                                 placeOfWorkVisit.getText().toString(),
                                                 temperature.getText().toString(),
@@ -246,11 +249,22 @@ public class HealthDeclarationActivity extends AppCompatActivity {
 
                                     if ( updateSuccess == true ) {
                                         Toast.makeText(HealthDeclarationActivity.this, "Health Declaration created!", Toast.LENGTH_SHORT).show();
+//                                        Intent intent = new Intent(HealthDeclarationActivity.this, CaseTrackerActivity.class);
+                                        finish();
+
                                     } else {
                                         Toast.makeText(HealthDeclarationActivity.this, "Cannot create Health Declaration", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                         }
                 });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 }

@@ -50,6 +50,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/caseContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -180,15 +181,14 @@
                                 android:textSize="12sp" />
 
                             <EditText
-                                android:id="@+id/checklistDate"
+                                android:id="@+id/datePicker"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:background="#FFFFFF"
-                                android:clickable="false"
                                 android:cursorVisible="false"
                                 android:ems="10"
-                                android:focusable="true"
+                                android:focusable="false"
                                 android:focusableInTouchMode="true"
                                 android:fontFamily="@font/poppins_light"
                                 android:hint="MM/DD/YYYY"
@@ -216,6 +216,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
+                                android:enabled="false"
                                 android:backgroundTint="#FDBF15"
                                 android:fontFamily="@font/poppins_bold"
                                 android:includeFontPadding="false"
